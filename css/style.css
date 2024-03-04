@@ -395,16 +395,17 @@ section {
 }
 }
 
-.image{
-    border-radius: 100%;
-    width:300px;
+.image {
+    border-radius: 100%; /* 画像を円形にする */
+    width: 50%; /* 標準の幅を300pxにする */
     height: auto; /* 画像の高さを自動調整 */
-    display: flex;
-    margin-right: 0px;
-    text-align: center;
-    float: right; /* 右寄せにするために float を使用 */
-    margin: 0 0 0px 0px; /* 余白を調整（上 右 下 左） */
-  }
+    display: block; /* flexではなくblockレベルの要素として扱う */
+    margin: 0 auto; /* 上下の余白は0、左右の余白は自動調整（中央寄せ） */
+    max-width: 300px; /* 画像の最大幅を親要素の100%に制限 */
+}
+
+
+
 
   .about-content{
     margin-bottom: 30px;
@@ -482,15 +483,23 @@ section {
 	  background-position: 0% 50%;
 	}
   }
-  .image1{
-    width:500px;
-    height: auto; /* 画像の高さを自動調整 */
+  .image1 {
+    width: 50%;
+    height: auto;
     display: flex;
-    margin-right: 30px;
     text-align: center;
-    float: right; /* 右寄せにするために float を使用 */
-    margin: 0 0 0px 10px; /* 余白を調整（上 右 下 左） */
-  }
+    float: right;
+    margin: 0 0 0px 30px;
+}
+
+/* メディアクエリを使用して画面幅が一定以下の場合のスタイルを指定 */
+@media (max-width: 600px) {
+    .image1 {
+        width: 100%; /* 画面幅に対して100%に設定 */
+        margin: 0; /* 余白をゼロに設定 */
+    }
+}
+
   .about-content{
     margin-bottom: 30px;
     background-color: #f0f0f0;
