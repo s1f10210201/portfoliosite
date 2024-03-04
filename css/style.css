@@ -397,7 +397,7 @@ section {
 
 .image{
     border-radius: 100%;
-    width:300px;
+    width:200px;
     height: auto; /* 画像の高さを自動調整 */
     display: flex;
     margin-right: 0px;
